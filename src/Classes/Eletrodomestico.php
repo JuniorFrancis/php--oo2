@@ -6,9 +6,9 @@ class Eletrodomestico extends Produto
 {
     public int $voltagem;
 
-    public function __construct(string $titulo, int $voltagem, int $potencia)
+    public function __construct(string $titulo, int $voltagem)
     {
-        $this->voltagem = $voltagem;
+        $this->definirVoltagem();
         parent::__construct($titulo);
         
     }
