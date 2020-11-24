@@ -10,7 +10,11 @@ class Produto
     public string $descricao = "Cerveja Brasileira";
     public float $preco;
 
-       //Propriedade em tempo de execução 
+    public function __construct(string $titulo)
+    {
+        $this->titulo = $titulo;
+    }
+    //Propriedade em tempo de execução 
    /* -- Quando adicionamos uma propriedade no meio da execução,
    diferentemente de adicionarmos esta propriedade da declaração da classe*/
    public function defineCodigoBarras(string $codigo): void

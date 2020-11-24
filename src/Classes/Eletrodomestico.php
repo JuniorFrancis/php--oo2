@@ -6,7 +6,14 @@ class Eletrodomestico extends Produto
 {
     public int $voltagem;
 
-    public function definirVoltagem(int $voltagem): void
+    public function __construct(string $titulo, int $voltagem, int $potencia)
+    {
+        $this->voltagem = $voltagem;
+        parent::__construct($titulo);
+        
+    }
+
+    public function definirVoltagem( int $voltagem): void
     {
         if ($voltagem === 110 || $voltagem === 220)
         {
