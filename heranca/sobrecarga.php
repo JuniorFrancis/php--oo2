@@ -26,4 +26,3 @@ $microondas->definirVoltagem(110);
 $microondas->definirPotencia(550);
 $microondas->detalhes();
 
-var_dump($microondas);

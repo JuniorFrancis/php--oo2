@@ -21,8 +21,6 @@ class Eletrodomestico extends Produto
         }
     }
 
-
-
     public function detalhes() : void
     {
         parent::detalhes();
