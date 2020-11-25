@@ -8,12 +8,12 @@ class Eletrodomestico extends Produto
 
     public function __construct(string $titulo, int $voltagem)
     {
-        $this->definirVoltagem();
+        $this->definirVoltagem($voltagem);
         parent::__construct($titulo);
         
     }
 
-    public function definirVoltagem( int $voltagem): void
+    protected function definirVoltagem( int $voltagem): void
     {
         if ($voltagem === 110 || $voltagem === 220)
         {
@@ -26,4 +26,6 @@ class Eletrodomestico extends Produto
         parent::detalhes();
         echo "<br>Voltagem: " . $this->voltagem . "<br>";
     }
+
+
 }
