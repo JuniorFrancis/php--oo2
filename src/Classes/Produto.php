@@ -6,9 +6,10 @@ class Produto
 {
     public const NORMA = "1050";
 
-    public string $titulo;
+    private string $titulo;
     public string $descricao = "Cerveja Brasileira";
-    public float $preco;
+    private float $preco;
+    private string $codigoBarras;
 
     public function __construct(string $titulo)
     {
@@ -22,13 +23,27 @@ class Produto
     $this->codigoBarras = $codigo;
    }
 
-   public function acessaCodigoBarras(): void
+   private function acessaCodigoBarras(): void
    {
-    echo "<br>" . $this->codigoBarras;
+    echo "<br>Código de barras no produto" . $this->codigoBarras;
    }
+
+   public function definePreco(float $preco) : void
+   {
+       if($preço > 0)
+       {
+        $this->preco = $preco;
+       }else 
+       {
+           echo "Valor inválido";
+       }
+       
+    }
 
    public function detalhes(): void
    {
        echo "Título: " . $this->titulo . "<br>";
+       echo "Preço do produto: " . $this->preco . "<br>";
+
    }
 }
