@@ -7,7 +7,7 @@ class Produto
     public const NORMA = "1050";
 
     private string $titulo;
-    public string $descricao = "Cerveja Brasileira";
+    public string $descricao = "Produtos em geral";
     private float $preco;
     private string $codigoBarras;
 
@@ -43,7 +43,7 @@ class Produto
    public function detalhes(): void
    {
        echo "Título: " . $this->titulo . "<br>";
-       echo "Preço do produto: " . $this->preco . "<br>";
+      // echo "Preço do produto: " . $this->preco . "<br>";
 
    }
 }
