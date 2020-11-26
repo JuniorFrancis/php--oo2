@@ -14,6 +14,7 @@ abstract class Pessoa
    
    private string $telefone;
    
+   /*Método Abstrato - Quando decla*/
    abstract public function setId(int $id): void;
 
    public function setNome($nome): void

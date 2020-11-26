@@ -2,7 +2,10 @@
 
 namespace App\Classes;
 
-class Produto 
+use App\Interfaces\Imprimivel;
+
+
+class Produto implements Imprimivel
 {
     public const NORMA = "1050";
 
@@ -23,14 +26,14 @@ class Produto
     $this->codigoBarras = $codigo;
    }
 
-   private function acessaCodigoBarras(): void
-   {
-    echo "<br>Código de barras no produto" . $this->codigoBarras;
+   private function acessaCodigoBarras(): string
+   { 
+    return "<br>Código de barras no produto: " . $this->codigoBarras;
    }
 
    public function definePreco(float $preco) : void
    {
-       if($preço > 0)
+       if($preco > 0)
        {
         $this->preco = $preco;
        }else 
@@ -43,7 +46,20 @@ class Produto
    public function detalhes(): void
    {
        echo "Título: " . $this->titulo . "<br>";
+       echo "<br>Preço do Produto: " . $this->preco . "<br>";
+       echo "<br>Descrição do produto: " . $this->descricao . "<br>";
+       echo $this->acessaCodigoBarras();
       // echo "Preço do produto: " . $this->preco . "<br>";
 
+   }
+
+   public function retornaDetalhes(): string
+   {
+       $saida = "<br>Nome do produto: " . $this->titulo . "<br>";
+       $saida = $saida . "<br>Preço do produto: " . $this->preco . "<br>";
+       $saida = $saida . "<br>Descrição do produto: " . $this->descricao . "<br>";
+       $saida = $saida . $this->acessaCodigoBarras();
+
+       return $saida;
    }
 }
