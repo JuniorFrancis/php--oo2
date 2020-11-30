@@ -4,26 +4,22 @@
 utilizando o mesmo nome para elas*/
 namespace App\Email;
 
-use App\Classes\Clientes;
-use App\Email\Adaptadores\Mailgun\Adaptador as Mailgun;
-use App\Email\Adaptadores\SES\Adaptador as SES;
+use App\Email\Adaptadores\AdaptadorInterface;
 
 const VERSAO = 1.0;
 
  class Envio 
 {
-    function enviar()
+    function enviar(AdaptadorInterface $adaptador)
     {
-        $adaptador = new Mailgun;
+        $adaptador->processar();
+       
+    //$transporte = new Transporte;
+    //$obj = new \stdClass;
+    //$cli = new Clientes;
 
-       // $transporte = new Transporte;
-
-       // $obj = new \stdClass;
-        $cli = new Clientes;
-
-        // \var_dump($adaptador, $transporte, $obj, $cli);
-
-        // var_dump($adaptador, $transporte, $obj, $cli);
+    // \var_dump($adaptador, $transporte, $obj, $cli);
+    // var_dump($adaptador, $transporte, $obj, $cli);
     }
 
     public function m1()
