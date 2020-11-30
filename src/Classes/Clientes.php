@@ -2,20 +2,13 @@
 
 namespace App\Classes;
 
-class Clientes 
+class Clientes extends Pessoa
 {
-   public string $nome;
-   public int $idade;
-   public string $endereco;
-   public string $telefone;
-
-   public function __construct(string $nome, string $telefone, int $idade)
+   public function setId(int $id): void
    {
-      $this->nome = $nome;
-      $this->telefone = $telefone;
-      $this->idade = $idade;
-
+      $this->id = $id + 1000;
    }
+
    /*A função GET__ é utlizada como tratamento para quando chamamos alguma propriedade
    em que ainda não foi instanciada*/
    public function __get(string $nomePropriedade): string

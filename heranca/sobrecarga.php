@@ -15,14 +15,14 @@ $geladeira->titulo = "Geladeira";
 
 $geladeira->defineCodigoBarras('110011');
 $geladeira->definirVoltagem(110);
-//$geladeira->detalhes();
+$geladeira->detalhes();
 
-$microondas = new App\Classes\Microondas;
-$microondas->preco = 300;
-$microondas->titulo = "X200";
+// $microondas = new App\Classes\Microondas;
+// $microondas->preco = 300;
+// $microondas->titulo = "X200";
 
-$microondas->defineCodigoBarras('101010');
-$microondas->definirVoltagem(110);
-$microondas->definirPotencia(550);
-$microondas->detalhes();
+// $microondas->defineCodigoBarras('101010');
+// $microondas->definirVoltagem(110);
+// $microondas->definirPotencia(550);
+// $microondas->detalhes();
 
