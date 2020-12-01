@@ -4,16 +4,16 @@ namespace App\Classes;
 
 class Pedido
 {
-    private Cliente $cli;
+    private Clientes $cli;
     private Produto $prod;
 
-    public function _construct(Cliente $cliente, Produto $produto)
+    public function _construct(Clientes $cliente, Produto $produto)
     {
         $this->cli = $cliente;
         $this->prod = $produto;
     }
 
-    public function getProduto() : Produto
+    public function getProduto(): Produto
     {
         return $this->prod;
     }

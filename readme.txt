@@ -26,3 +26,9 @@ Tomar cuidado com 1*- A sobrescrição deles em outra classe via herança també
 de sobrescrever, irá criar um outro/a método/propriedade em tempo de execução 
 com visibilidade Public com as propriedades
 que você escolheu.
+
+- -- --- -- -- - -- --- --
+
+Traits - 
+    É o que chamam de herança horizontal, podemos instancia-las e escrevermos um código par aela, e usar em qualquer
+     parte do código. Basta apenas chama-la com "use" no arquivo em questão. 
