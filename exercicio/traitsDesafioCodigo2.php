@@ -52,7 +52,7 @@ class Carro
     
 }
 
-$pessoa = new Pessoa("carlos Silva", 33);
+$pessoa = new Pessoa("Carlos Silva", 33);
 $carro = new Carro($pessoa);
 $carro->getMotorista();
 
