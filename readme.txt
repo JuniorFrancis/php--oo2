@@ -32,3 +32,5 @@ que você escolheu.
 Traits - 
     É o que chamam de herança horizontal, podemos instancia-las e escrevermos um código par aela, e usar em qualquer
      parte do código. Basta apenas chama-la com "use" no arquivo em questão. 
+
+

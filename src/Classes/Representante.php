@@ -3,7 +3,7 @@ namespace App\Classes;
 
 class Representante extends Vendedor
 {
-    static public function comissao(boll $temBonus): float
+    static protected function comissao(bool $temBonus): float
     {
         if($temBonus)
         {
