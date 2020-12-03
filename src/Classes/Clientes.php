@@ -2,8 +2,13 @@
 
 namespace App\Classes;
 
+use App\Traits\Imprimir;
+
 class Clientes extends Pessoa
 {
+
+   use Imprimir;
+
    public function setId(int $id): void
    {
       $this->id = $id + 1000;

@@ -6,7 +6,7 @@ function carregar(string $nomeClasse)
 
     if(file_exists($caminhoCompleto))
     {
-        require $caminhoCompleto;
+        // require $caminhoCompleto
     }
 }
 
